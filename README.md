@@ -1,6 +1,7 @@
 # OBJECTIVE 
 To show entanglement appears nonlocal in low dimensions, but is fully causal in high-dimensional Hilbert-space dynamics.(for more theoritical info see phy.pdf)
-# SIMULATION 0(IGNORE , GRIFFITHS QM EXERCISE BUT ITS REALLY AN INTERESTING ONE )
+# SIMULATION 0
+(IGNORE , GRIFFITHS QM EXERCISE BUT ITS REALLY AN INTERESTING ONE )
 # Simulation 1: Hilbert-Space Guided Trajectories
 This model establishes the core concept: a particle's trajectory is biased by a hidden internal state, which is only revealed by a later measurement.
 

@@ -27,15 +27,54 @@ This framework allows studying the crossover between classical-like behavior (sm
 
 Requires Python 3.9+ and common scientific libraries:
 
-```bash
-git clone <repo-url>
+
+# git clone <repo-url>
 cd spacetime-hilbert-simulator
 pip install -r requirements.txt
 
-numpy
-matplotlib
-scipy
-tqdm
 
+# Usage
+Run the simulation
 
+This script will:
+
+Initialize particles with random spacetime positions and Hilbert vectors.
+
+Evolve trajectories over time with Hilbert-space coupling.
+
+Perform measurement projections at specified times.
+
+Generate plots of:
+
+Trajectories colored by measurement outcome
+
+Interference patterns weighted by Hilbert-space amplitudes
+
+Hilbert dimension 
+𝑁
+N sweep to visualize convergence to QM
+
+Example plots
+
+Trajectory Plot: Particle paths in spacetime, colored by projected measurement outcome.
+
+Interference Histogram: Weighted final x-positions showing constructive and destructive interference.
+
+N-Sweep Comparison: Shows how small Hilbert-space dimensions produce deviations, while large dimensions converge to standard QM behavior.
+
+# Scientific Notes
+
+The simulation does not attempt to explain wavefunction collapse. It demonstrates how post-selection and Hilbert-space coupling can generate interference patterns.
+
+Small Hilbert dimensions exhibit classical-like behavior; large dimensions converge to standard QM predictions.
+
+This framework is useful for exploring finite-dimensional approximations of quantum systems, visualizing path-integral contributions, and testing new conceptual ideas in quantum foundations.
+
+# References
+
+Delayed-choice quantum eraser and post-selection literature
+
+Path-integral formulation (Feynman, 1948)
+
+Hilbert-space dynamics in finite-dimensional approximations of QM
 

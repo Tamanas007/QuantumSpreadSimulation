@@ -1,15 +1,53 @@
 # Spacetime + Hilbert-Space Path-Integral Simulator
 
 ## Overview
+# Core Objective
 
-This repository contains a simulation framework exploring **particle trajectories coupled with finite-dimensional Hilbert-space dynamics**, inspired by delayed-choice quantum eraser experiments. The core idea is:
+Our goal was to explore whether complex quantum behaviors like the delayed-choice experiment and interference could be intuitively understood by modeling particles as having not just a position in spacetime, but also a hidden "internal state" within an abstract Hilbert space.
 
-- Particles evolve in physical spacetime while carrying an internal Hilbert-space vector.
-- Coupling between Hilbert-space and trajectory influences the motion.
-- Measurement is implemented as a projection in Hilbert space, post-selecting trajectories based on internal state.
-- Interference patterns emerge naturally from path-integral-like weighting of all trajectories.
+Phase 1: The Basic "Delayed-Choice" Model
 
-This framework allows studying the crossover between classical-like behavior (small Hilbert dimension) and standard quantum mechanics (large Hilbert dimension).
+We began with a simple concept: what if a particle's trajectory was secretly biased by a hidden internal state?
+
+Simulation: Particles moved randomly, but with a slight "drift" determined by a static, internal Hilbert vector. We then performed a "delayed-choice" measurement by reading this internal state after the trajectory was complete and coloring the particle's entire path based on the outcome.
+
+# Key Insight:
+We immediately saw the core illusion of retrocausality. The trajectories of different colors appeared to "know" their future measurement outcome from the very beginning. This simulation proved that no backward-in-time influence was needed. The measurement was simply post-selection—a way of sorting particles based on a bias they had all along.
+
+Phase 2: The Role of Internal Complexity
+
+Next, we investigated how the complexity of the internal state affected the outcome. We did this by changing the number of dimensions, N, of the Hilbert space.
+
+Simulation: We ran the same experiment but varied N from a very small number (like 1) to a large one (like 50).
+
+Key Insight: This revealed a profound connection to the classical world.
+
+Low N: The internal state provided a strong, simple signal, leading to highly biased trajectories.
+
+High N: The many random components of the internal state averaged out to nearly zero (a consequence of the Central Limit Theorem). This canceled out the drift, and the particle's motion became simple, classical diffusion. This showed how increasing hidden complexity can "wash out" quantum effects and lead to classical behavior.
+
+Phase 3: Introducing True Interference
+
+To go beyond simple sorting, we needed to simulate the wave-like nature of particles.
+
+Simulation: We upgraded the internal state to use complex numbers, analogous to the amplitudes of a quantum wavefunction. We then calculated a final "interference pattern" not by counting particles, but by creating a weighted histogram. Each particle's weight was the squared magnitude of the sum of its internal complex amplitudes (|sum(amplitudes)|²).
+
+# Key Insight: 
+This was a breakthrough. The resulting plots showed clear interference fringes—peaks and valleys that were completely absent in the raw position data. We had successfully modeled interference as an effect emerging from the addition and cancellation of hidden, internal amplitudes.
+
+Phase 4: The Path Integral & Dynamic Feedback
+
+Our final and most advanced model introduced a dynamic, two-way coupling between the particle's position and its internal state.
+
+# Simulation: 
+The particle's position now influenced its internal state, and the internal state influenced its position, creating a feedback loop. The trajectories became complex and oscillatory. We then used a measurement of the internal state at an intermediate time to weight each particle's contribution to the final interference pattern.
+
+# Key Insight:
+This simulation became a beautiful analogy for Feynman's Path Integral. Each trajectory was a single "path," and its weight represented the "phase" contribution of that path to the final outcome. Summing all these weighted paths produced our most intricate and realistic interference pattern yet, showing how interference arises from the history of interaction between a particle's external path and its internal state.
+
+# Overall Conclusion
+
+Across these simulations, we built a consistent and intuitive framework. Quantum phenomena can be viewed not as spooky actions in spacetime, but as the observable consequences of a richer reality: a combined manifold of spacetime and an internal Hilbert space. A "measurement" is simply a projection—a partial glimpse into this internal space—that allows us to sort through spacetime events and reveal the profound correlations that were encoded within this higher-dimensional structure all along.
 
 ---
 
